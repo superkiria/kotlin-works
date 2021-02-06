@@ -1,0 +1,28 @@
+import tree.BinaryTreeNode
+
+fun main(args: Array<String>) {
+    val bt = BinaryTreeNode(70, null)
+    bt.add(100)
+    bt.add(20)
+    bt.add(30)
+    bt.add(50)
+    bt.add(40)
+    bt.add(101)
+    bt.add(21)
+    bt.add(31)
+    bt.add(51)
+    bt.add(41)
+    bt.add(99)
+    bt.add(19)
+    bt.add(29)
+    bt.add(49)
+    bt.add(39)
+    println(bt.toListString())
+    bt.remove(101)
+    println(bt.toListString())
+    bt.remove(31)
+    println(bt.toListString())
+    println(bt.left!!.getMaxValue())
+    println(bt.toListString())
+    println(bt.right!!.getMinValue())
+}
