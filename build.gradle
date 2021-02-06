@@ -20,4 +20,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    afterTest { desc, result ->
+        logger.quiet "Executing test [${desc.className}] ${desc.name} with result: ${result.resultType}"
+    }
 }
