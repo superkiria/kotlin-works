@@ -9,7 +9,8 @@ class BinaryTreeNodeTest {
     @Test
     @DisplayName("Test for adding elements to binary tree 01")
     fun addTest01() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         assertThat(bt.toListString()).isEqualTo("=50")
         bt.add(45)
         assertThat(bt.toListString()).isEqualTo("l=45 =50")
@@ -34,7 +35,8 @@ class BinaryTreeNodeTest {
     @Test
     @DisplayName("Test for removing elements from binary tree 01")
     fun removeTest01() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         bt.add(45)
         bt.add(51)
         bt.add(20)
@@ -57,7 +59,8 @@ class BinaryTreeNodeTest {
     @Test
     @DisplayName("Test for removing elements from binary tree 02 - only removing from top")
     fun removeTest02() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         bt.add(45)
         bt.add(51)
         bt.add(20)
@@ -97,7 +100,8 @@ class BinaryTreeNodeTest {
     @Test
     @DisplayName("Test for removing elements from binary tree 03 - only removing from middle")
     fun removeTest03() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         bt.add(45)
         bt.add(51)
         bt.add(20)
@@ -137,7 +141,8 @@ class BinaryTreeNodeTest {
     @Test
     @DisplayName("Test for removing elements from binary tree 04 - removing and adding")
     fun removeTest04() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         bt.add(45)
         bt.add(51)
         bt.add(20)

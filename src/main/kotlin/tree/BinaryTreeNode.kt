@@ -46,11 +46,11 @@ class BinaryTreeNode <T : Comparable<T>>(var value: T?, var parent: BinaryTreeNo
         return null
     }
 
-    fun getMinValue(): T {
+    private fun getMinValue(): T {
         return left?.getMinValue() ?: value!!
     }
 
-    fun getMaxValue(): T {
+    private fun getMaxValue(): T {
         return right?.getMaxValue() ?: value!!
     }
 
@@ -112,11 +112,6 @@ class BinaryTreeNode <T : Comparable<T>>(var value: T?, var parent: BinaryTreeNo
         if (right != null) {
             right!!.cutTop(max)
         }
-    }
-
-    fun cut(min : T, max : T) {
-        this.cutBottom(min)
-        this.cutTop(max)
     }
 
 }
