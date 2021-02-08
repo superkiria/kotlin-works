@@ -119,4 +119,18 @@ class BinaryTreeNode <T : Comparable<T>>(var value: T?, var parent: BinaryTreeNo
         this.cutTop(max)
     }
 
+    fun cutAlbertVersion(root: BinaryTreeNode<T>?, min: T, max: T) : BinaryTreeNode<T>? {
+        if (root == null) {
+            return null
+        }
+        if (root.value!! < min) {
+            return cutAlbertVersion(root.right, min, max)
+        } else if (root.value!! > max) {
+            return cutAlbertVersion(root.left, min, max)
+        }
+        root.left = cutAlbertVersion(root.left, min, max)
+        root.right = cutAlbertVersion(root.right, min, max)
+        return root
+    }
+
 }
