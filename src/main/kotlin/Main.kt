@@ -22,7 +22,4 @@ fun main(args: Array<String>) {
     println(bt.toListString())
     bt.remove(31)
     println(bt.toListString())
-    println(bt.left!!.getMaxValue())
-    println(bt.toListString())
-    println(bt.right!!.getMinValue())
 }

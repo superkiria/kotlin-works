@@ -8,7 +8,8 @@ class BinaryTreeNodeCutTest {
     @Test
     @DisplayName("Test for cutting elements from binary tree 01")
     fun cutTest01() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         bt.add(45)
         bt.add(51)
         bt.add(20)
@@ -26,7 +27,8 @@ class BinaryTreeNodeCutTest {
     @Test
     @DisplayName("Test for cutting elements from binary tree 02")
     fun cutTest02() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         bt.add(45)
         bt.add(51)
         bt.add(20)
@@ -44,7 +46,8 @@ class BinaryTreeNodeCutTest {
     @Test
     @DisplayName("Test for cutting elements from binary tree 03")
     fun cutTest03() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         bt.add(45)
         bt.add(51)
         bt.add(20)
@@ -62,7 +65,8 @@ class BinaryTreeNodeCutTest {
     @Test
     @DisplayName("Test for cutting elements from binary tree 04")
     fun cutTest04() {
-        val bt = BinaryTreeNode(50, null)
+        val bt = BinaryTree<Int>()
+        bt.add(50)
         bt.add(45)
         bt.add(20)
         bt.add(30)
