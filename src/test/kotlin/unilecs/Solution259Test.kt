@@ -19,4 +19,9 @@ class Solution259Test {
         assertEquals(2, getLongestHarmonicSubsequence(arrayOf(1, 2, 3, 4, 5)))
         assertEquals(8, getLongestHarmonicSubsequence(arrayOf(2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4)))
     }
+
+    @Test
+    fun solution259Test_03() {
+        assertEquals(0, getLongestHarmonicSubsequence(arrayOf(0, 2, 2, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 8, 10)))
+    }
 }
