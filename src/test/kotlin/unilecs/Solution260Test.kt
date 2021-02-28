@@ -33,5 +33,8 @@ public class Solution260Test {
         assertEquals(10, func(38, 534), "$func")
         assertEquals(11, func(39, 534), "$func")
         assertEquals(12, func(40, 534), "$func")
+        assertEquals(7, func(5, 21), "$func")
+        assertEquals(28, func(53, 1000), "$func")
+        assertEquals(500, func(999, 1000), "$func")
     }
 }
