@@ -2,9 +2,6 @@ package unilecs
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import java.util.concurrent.SynchronousQueue
-import java.util.concurrent.ThreadPoolExecutor
-import java.util.concurrent.TimeUnit
 
 class Solution261Test {
 
@@ -27,26 +24,7 @@ class Solution261Test {
 
     @Test
     fun solution261Test_03() {
-        val executor = ThreadPoolExecutor(0, Int.MAX_VALUE,
-            60L, TimeUnit.SECONDS,
-            SynchronousQueue<Runnable>()
-        )
-        for(size in 1..92683) {
-            val worker = Runnable {
-                if (
-                    findMaxArea(IntArray(size) { i -> i + 1 }) != (size / 2) * ((size / 2) + size % 2)
-                ) {
-                    println(size.toString())
-                }
-            }
-            while (executor.activeCount >= 12) {
-//                Thread.sleep(10)
-            }
-            executor.submit(worker)
-        }
-        while (executor.activeCount > 0) {
-            Thread.sleep(10)
-        }
+        Assertions.assertEquals(250000, findMaxArea(IntArray(1001) { i -> i }))
     }
 
     @Test

@@ -2,6 +2,17 @@ package unilecs
 
 import kotlin.math.abs
 
+fun findMaxArea(walls : IntArray) : Int {
+    var left = 0
+    var right = walls.size - 1
+    var maxArea = 0
+    while (left != right) {
+        maxArea = maxOf(maxArea, minOf(walls[left], walls[right]) * (right - left))
+        if (walls[left] < walls[right]) left++ else right--
+    }
+    return maxArea;
+}
+
 fun findMaxAreaBruteForce(walls : IntArray) : Int {
     val wallsPositions = mutableListOf<Pair<Int, Int>>()
     for(i in walls.indices) {
@@ -14,17 +25,6 @@ fun findMaxAreaBruteForce(walls : IntArray) : Int {
             maxArea = maxOf(maxArea,
                 wallsPositions[i].first * abs(wallsPositions[i].second - wallsPositions[j].second))
         }
-    }
-    return maxArea;
-}
-
-fun findMaxArea(walls : IntArray) : Int {
-    var left = 0
-    var right = walls.size - 1
-    var maxArea = minOf(walls[left], walls[right]) * (right - left)
-    while (left != right) {
-        if (walls[left] < walls[right]) left++ else right--
-        maxArea = maxOf(maxArea, minOf(walls[left], walls[right]) * (right - left))
     }
     return maxArea;
 }
